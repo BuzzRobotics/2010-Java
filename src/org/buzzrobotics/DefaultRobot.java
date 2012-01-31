@@ -325,23 +325,23 @@ public class DefaultRobot extends IterativeRobot {
 
 
            //Arcade Drive.
-                robotDriveTrain = new RobotDrive(1,2,RobotDrive.kDefaultSensitivity);
+                robotDriveTrain = new RobotDrive(1,2);
 
            //Joysticks
                 rightStick = new Joystick(driverJoystick);
                 leftStick = new Joystick(elevatorJoystick);
 
            //Victors
-                robotVictorPossessor = new Victor(4,possessorVictorPWM);
+                robotVictorPossessor = new Victor(1,possessorVictorPWM);
                 robotVictorPossessor.setBounds(255,235,128,120,0);
-                robotVictorKicker = new Victor(4,kickerVictorPWM);
+                robotVictorKicker = new Victor(1,kickerVictorPWM);
                 robotVictorKicker.setBounds(255,235,128,120,0);          // setBounds may not be needed
 //                m_robotVictor.set(1.0);
 
            //Jaguars
-                robotJaguarLift = new Jaguar(4,liftJaguarPWM);
-                robotJaguarTilt = new Jaguar(4,tiltVictorPWM);
-                robotJaguarTensioner = new Jaguar(4,tensionerJaguar);
+                robotJaguarLift = new Jaguar(1,liftJaguarPWM);
+                robotJaguarTilt = new Jaguar(1,tiltVictorPWM);
+                robotJaguarTensioner = new Jaguar(1,tensionerJaguar);
 
                                 //BREAD BOARD CODE ONLY
                                 //robotJaguarKicker = new Jaguar(4,kickerJaguarPWM);
@@ -349,14 +349,14 @@ public class DefaultRobot extends IterativeRobot {
                                 //robotJaguarTensioner = new Victor(4,tensionerJaguar);
 
            //Servos
-                robotServoLift = new Servo(4,liftServoPWM);
-                robotServoTilt = new Servo(4,tiltServoPWM);
-                robotServoCamera = new Servo(4,cameraServoPWM);
+                robotServoLift = new Servo(1,liftServoPWM);
+                robotServoTilt = new Servo(1,tiltServoPWM);
+                robotServoCamera = new Servo(1,cameraServoPWM);
 
            //Relays
-                robotSpikePossessorLight = new Relay(4,possessorLightPWM,Relay.Direction.kForward);
+                robotSpikePossessorLight = new Relay(1,possessorLightPWM,Relay.Direction.kForward);
                 robotSpikePossessorLight.set(Relay.Value.kOff);
-                robotSpikeTargetLight = new Relay(4,targetLightPWM,Relay.Direction.kForward);
+                robotSpikeTargetLight = new Relay(1,targetLightPWM,Relay.Direction.kForward);
                 robotSpikeTargetLight.set(Relay.Value.kOff);
 
            //Analogs---slot 6 on cRIO
